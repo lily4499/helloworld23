@@ -3,10 +3,10 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.example.maven-project</groupId>
-  <artifactId>maven-project</artifactId>
+  <groupId>com.lili.app</groupId>
+  <artifactId>lili-maven</artifactId>
   <packaging>pom</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.1.0-SNAPSHOT</version>
   <name>Maven Project</name>
   <description>Sample Maven project with a working, deployable site.</description>
   <url>http://www.example.com</url>
@@ -21,12 +21,25 @@
     <module>webapp</module>
   </modules>
 
-  <distributionManagement>
+<!--   <distributionManagement>
     <site>
       <id>site-server</id>
       <name>Test Project Site</name>
       <url>file:///tmp/maven-project-site</url>
     </site>
+  </distributionManagement> -->
+
+  <distributionManagement>
+    <repository>
+      <id>central</id>
+      <name>a0n5tucjjiuir-artifactory-primary-0-releases</name>
+      <url>https://ibt.jfrog.io/artifactory/ibt-libs-release</url>
+    </repository>
+    <snapshotRepository>
+      <id>central</id>
+      <name>a0n5tucjjiuir-artifactory-primary-0-releases</name>
+      <url>https://ibt.jfrog.io/artifactory/ibt-libs-snapshot</url>
+    </snapshotRepository>
   </distributionManagement>
 
   <build>
